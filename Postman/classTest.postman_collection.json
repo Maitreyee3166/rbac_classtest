@@ -1,0 +1,834 @@
+{
+  "info": {
+    "_postman_id": "43a56cca-3c50-4dcd-b23b-b4f118b57d78",
+    "name": "classTest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53360166",
+    "_collection_link": "https://go.postman.co/collection/53360166-43a56cca-3c50-4dcd-b23b-b4f118b57d78?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "auth register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "ms",
+              "type": "text",
+              "uuid": "e35e433f-4074-4f50-a7f1-c9178609313c"
+            },
+            {
+              "key": "email",
+              "value": "ms@gmail.com",
+              "type": "text",
+              "uuid": "80aea921-9d04-40ee-a6ac-0f0776272ab6"
+            },
+            {
+              "key": "phone",
+              "value": "1234567891",
+              "type": "text",
+              "uuid": "ef89877c-0e8f-4938-a7ca-0e85b1a6f9b2"
+            },
+            {
+              "key": "password",
+              "value": "1111",
+              "type": "text",
+              "uuid": "3c01c80a-636e-4fb6-a63a-4b1cee6330ac"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "3242b1f0-24fd-45d2-9721-1f9b6c48a2c8",
+              "src": "/C:/Users/HP/OneDrive/Desktop/collegeProject/image/dressimg1.webp"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "users create",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5MjMwM2Q5NDk0NDM5NTViY2E2NCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU2ODAzLCJleHAiOjE3NzgzNjA0MDN9.TXDuvSJiWEQ88GKQeFCJNxNtft_GiWem3eiUvN0biBw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "xyz",
+              "type": "text",
+              "uuid": "5aa29bc1-cbf2-4414-800c-2ce1b460c078"
+            },
+            {
+              "key": "email",
+              "value": "xyz@gmail.com",
+              "type": "text",
+              "uuid": "4b8b66da-c0ba-4cba-be93-1cba9a97e692"
+            },
+            {
+              "key": "phone",
+              "value": "1234567478",
+              "type": "text",
+              "uuid": "bf24e277-9a02-4f5f-86fe-70f3287fc598"
+            },
+            {
+              "key": "role",
+              "value": "employee",
+              "type": "text",
+              "uuid": "b3aa25d8-69b9-45d8-92c9-204ea78ec493"
+            },
+            {
+              "key": "password",
+              "value": "4444",
+              "type": "text",
+              "uuid": "1e856a1b-5172-4fcd-8e7c-d8019d454b92"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "3159e96b-a175-40e2-842a-566cb3f5c664",
+              "src": "/C:/Users/HP/OneDrive/Desktop/collegeProject/image/dressimg4.webp"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "auth login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ms@gmail.com\",\r\n    \"password\": \"1111\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "all users",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5MjMwM2Q5NDk0NDM5NTViY2E2NCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU2ODAzLCJleHAiOjE3NzgzNjA0MDN9.TXDuvSJiWEQ88GKQeFCJNxNtft_GiWem3eiUvN0biBw",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user by id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5MjMwM2Q5NDk0NDM5NTViY2E2NCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU2ODAzLCJleHAiOjE3NzgzNjA0MDN9.TXDuvSJiWEQ88GKQeFCJNxNtft_GiWem3eiUvN0biBw",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/users/69ff93ad70c700a680fcebb5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "69ff93ad70c700a680fcebb5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "users update",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY3ZjVlOWY1MTRhMDRlMDQ3NjJjNCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU2NDY3LCJleHAiOjE3NzgzNjAwNjd9.D9SEjWqxqNpCGG1nOTvySoMSgbAD2jqdSUjIwu3HdvA",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "role",
+              "value": "employee",
+              "type": "text",
+              "uuid": "c27066f1-c715-4c05-a28a-eeff6f4db898"
+            },
+            {
+              "key": "phone",
+              "value": "1234567458",
+              "type": "text",
+              "uuid": "e401548e-f8e7-45e3-8db3-0279617bb38e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/69ff810b9f514a04e04762ca",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "69ff810b9f514a04e04762ca"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update users status",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5MjMwM2Q5NDk0NDM5NTViY2E2NCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU2ODAzLCJleHAiOjE3NzgzNjA0MDN9.TXDuvSJiWEQ88GKQeFCJNxNtft_GiWem3eiUvN0biBw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\" : \"Activate\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/status/69ff93ad70c700a680fcebb5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "status",
+            "69ff93ad70c700a680fcebb5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete users",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY3ZjVlOWY1MTRhMDRlMDQ3NjJjNCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzUxOTg0LCJleHAiOjE3NzgzNTU1ODR9.k-tJOXwrjEO5uItwjkDpTv70pgN3O9NIUP10ODZLhNo",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/users/69ff810b9f514a04e04762ca",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "69ff810b9f514a04e04762ca"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user delete",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYxNzMwNGFkZmI4ZDM2YzYyMDU0NyIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzUxMzkyLCJleHAiOjE3NzgzNTQ5OTJ9.m3yRUSY50-RlWSw3TuiNUfQoKAS-KMP1oJyV01MhabM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/auth/delete/69ff674bcee9e1436a3ae398",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "delete",
+            "69ff674bcee9e1436a3ae398"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks update",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY4MDg5OWY1MTRhMDRlMDQ3NjJjOSIsIm5hbWUiOiJwcXIiLCJlbWFpbCI6InBxckBnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NzgzNTUxNzAsImV4cCI6MTc3ODM1ODc3MH0.cs80X0ptzy2EEJOzwHHbNTnCmeSXhFgoiAJ1gB0chw8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "status",
+              "value": "In Progress",
+              "type": "text",
+              "uuid": "a8f95941-de02-447d-b739-697f45e71e5b"
+            },
+            {
+              "key": "attachments",
+              "type": "file",
+              "uuid": "6ca50377-0f46-471f-9f94-94b18daf2ad8",
+              "src": "/C:/Users/HP/OneDrive/Desktop/collegeProject/image/notes.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/69ff8426b82daf8488d16b42",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "69ff8426b82daf8488d16b42"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks get",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks by id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYxNzMwNGFkZmI4ZDM2YzYyMDU0NyIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzUxNjU4LCJleHAiOjE3NzgzNTUyNTh9._cY7rVmJYY-cnslIDO_IF6AUf9QX6GRL65hJcMnFdnc",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/69ff6321763d3ff18c2666b6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "69ff6321763d3ff18c2666b6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "users login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYwNzBjYzdjNzRkM2RkOTQ2NjYyNCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzIxMzM4LCJleHAiOjE3NzgzMjQ5Mzh9.2sNrSPGG_zq5lbDLDRyQPBtn_Z-EmIxwwzdEzVCx__E",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"xyz@gmail.com\",\r\n    \"password\": \"4444\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "all tasks",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5YmRiNGJhNDQ5YzhlNDE3ODdhZCIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU5MjY0LCJleHAiOjE3NzgzNjI4NjR9.V0xuAQ1XvMWcaeZ1yjP-nkte9LrYZePv1IREj1S9JgY",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks create",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY4MDYyOWY1MTRhMDRlMDQ3NjJjOCIsIm5hbWUiOiJhYmMiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc3ODM1MzAwOSwiZXhwIjoxNzc4MzU2NjA5fQ.lQA4B0mGItYQrjrU3aNC26vfUDFX-sZGSBKe4XYgT28",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "IT",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "worked on IT",
+              "type": "text"
+            },
+            {
+              "key": "assignedTo",
+              "value": "69ff810b9f514a04e04762ca",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "Completed",
+              "type": "text"
+            },
+            {
+              "key": "priority",
+              "value": "High",
+              "type": "text"
+            },
+            {
+              "key": "dueDate",
+              "value": "2026-05-25",
+              "type": "text",
+              "uuid": "385ff92f-926f-4bd5-b1b0-041a2bc44b1b"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks assign update",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY4MDYyOWY1MTRhMDRlMDQ3NjJjOCIsIm5hbWUiOiJhYmMiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc3ODM1MzAwOSwiZXhwIjoxNzc4MzU2NjA5fQ.lQA4B0mGItYQrjrU3aNC26vfUDFX-sZGSBKe4XYgT28",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"assignedTo\": \"69ff80899f514a04e04762c9\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/assign/69ff8426b82daf8488d16b42",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "assign",
+            "69ff8426b82daf8488d16b42"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks status update",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY4MDYyOWY1MTRhMDRlMDQ3NjJjOCIsIm5hbWUiOiJhYmMiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc3ODM1MzAwOSwiZXhwIjoxNzc4MzU2NjA5fQ.lQA4B0mGItYQrjrU3aNC26vfUDFX-sZGSBKe4XYgT28",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\":\"In Progress\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/status/69ff8426b82daf8488d16b42",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "status",
+            "69ff8426b82daf8488d16b42"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks by id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY4MDg5OWY1MTRhMDRlMDQ3NjJjOSIsIm5hbWUiOiJwcXIiLCJlbWFpbCI6InBxckBnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NzgzNTUxNzAsImV4cCI6MTc3ODM1ODc3MH0.cs80X0ptzy2EEJOzwHHbNTnCmeSXhFgoiAJ1gB0chw8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/69ff8426b82daf8488d16b42",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "69ff8426b82daf8488d16b42"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin logout",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5YWE0NzIwMWE1ODMyYTg4MTFlMyIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzU5MTkxLCJleHAiOjE3NzgzNjI3OTF9.rXJwT76URTPmKjqO2u5tx5lWJbzP9237QF7O7MuRCP0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ms@gmail.com\",\r\n    \"password\": \"1111\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks search",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/search?priority=high",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "priority",
+              "value": "high"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tasks by employeeid",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5M2FkNzBjNzAwYTY4MGZjZWJiNSIsIm5hbWUiOiJ4eXoiLCJlbWFpbCI6Inh5ekBnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NzgzNTk3MDksImV4cCI6MTc3ODM2MzMwOX0.TnI38PmN9l5y4LFiP9JSCzQ5FP3ZGvP-bldP5OkFv-8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/employeeid/69ff93ad70c700a680fcebb5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "employeeid",
+            "69ff93ad70c700a680fcebb5"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
