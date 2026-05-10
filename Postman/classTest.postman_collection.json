@@ -353,37 +353,7 @@
       },
       "response": []
     },
-    {
-      "name": "user delete",
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYxNzMwNGFkZmI4ZDM2YzYyMDU0NyIsIm5hbWUiOiJtcyIsImVtYWlsIjoibXNAZ21haWwuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4MzUxMzkyLCJleHAiOjE3NzgzNTQ5OTJ9.m3yRUSY50-RlWSw3TuiNUfQoKAS-KMP1oJyV01MhabM",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:5000/api/auth/delete/69ff674bcee9e1436a3ae398",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "auth",
-            "delete",
-            "69ff674bcee9e1436a3ae398"
-          ]
-        }
-      },
-      "response": []
-    },
+
     {
       "name": "tasks update",
       "request": {
@@ -700,36 +670,7 @@
       },
       "response": []
     },
-    {
-      "name": "tasks by id",
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY4MDg5OWY1MTRhMDRlMDQ3NjJjOSIsIm5hbWUiOiJwcXIiLCJlbWFpbCI6InBxckBnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NzgzNTUxNzAsImV4cCI6MTc3ODM1ODc3MH0.cs80X0ptzy2EEJOzwHHbNTnCmeSXhFgoiAJ1gB0chw8",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:5000/api/tasks/69ff8426b82daf8488d16b42",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "tasks",
-            "69ff8426b82daf8488d16b42"
-          ]
-        }
-      },
-      "response": []
-    },
+    
     {
       "name": "admin logout",
       "request": {
@@ -800,7 +741,7 @@
       "response": []
     },
     {
-      "name": "tasks by employeeid",
+      "name": "own tasks",
       "request": {
         "auth": {
           "type": "noauth"
@@ -809,12 +750,12 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5M2FkNzBjNzAwYTY4MGZjZWJiNSIsIm5hbWUiOiJ4eXoiLCJlbWFpbCI6Inh5ekBnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NzgiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3NzgzNTk3MDksImV4cCI6MTc3ODM2MzMwOX0.TnI38PmN9l5y4LFiP9JSCzQ5FP3ZGvP-bldP5OkFv-8",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY5MzZjNzBjNzAwYTY4MGZjZWJiNCIsIm5hbWUiOiJwcXIiLCJlbWFpbCI6InBxckBnbWFpbC5jb20iLCJwaG9uZSI6IjEyMzQ1Njc0NTgiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3Nzg0MTMyNjcsImV4cCI6MTc3ODQxNjg2N30.MocrSlKkou7E4RcUWiXnAcWxgbQHUjhtm8oEvk_T_8A",
             "type": "text"
           }
         ],
         "url": {
-          "raw": "http://localhost:5000/api/tasks/employeeid/69ff93ad70c700a680fcebb5",
+          "raw": "http://localhost:5000/api/tasks/owntask",
           "protocol": "http",
           "host": [
             "localhost"
@@ -823,8 +764,7 @@
           "path": [
             "api",
             "tasks",
-            "employeeid",
-            "69ff93ad70c700a680fcebb5"
+            "owntask"
           ]
         }
       },

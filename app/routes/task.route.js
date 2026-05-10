@@ -14,7 +14,7 @@ const TaskImage = require('../utils/cloudinary');
 
 
 router.get('/', UserAuthCheck, RoleAuthCheck('admin', 'manager'), TaskController.alltask);
-router.get('/employeeid/:id', UserAuthCheck, RoleAuthCheck('employee'), TaskController.ownTask); 
+router.get('/owntask', UserAuthCheck, RoleAuthCheck('employee'), TaskController.ownTask); 
 router.get('/:id', UserAuthCheck, RoleAuthCheck('employee','manager'), TaskController.taskById);
 
 router.post('/', UserAuthCheck, RoleAuthCheck('manager'), TaskImage.single('attachments'), TaskController.taskCreate);

@@ -77,36 +77,26 @@ class TaskController {
 
     async ownTask(req, res) {
         try {
-            const id = req.params.id;
 
-            const existTask = await Task.find({ assignedTo: id });
+            const existTask = await Task.find({ assignedTo: req.admin.id });
 
 
-            if (!existTask) {
+            if (existTask.length == 0) {
                 return res.status(400).json({
                     success: false,
-                    message: "Task does not exist",
+                    message: "No assign task",
                 });
             }
 
-
-            let existTaskid = existTask.find(ele => ele.assignedTo == id);
-
-
-            if (req.admin.id == existTaskid.assignedTo) {
+            if (existTask) {
 
                 return res.status(200).json({
                     success: true,
                     message: "data get successfully",
                     data: existTask
                 });
-
             }
-            return res.status(400).json({
-                success: false,
-                message: "no assign task",
-
-            });
+            
 
         } catch (error) {
             return res.status(500).json({
@@ -135,7 +125,7 @@ class TaskController {
             if (!assignUser) {
                 return res.status(400).json({
                     success: false,
-                    message: "employee not exist",
+                    message: "employee does not exist",
 
                 });
             } else {
